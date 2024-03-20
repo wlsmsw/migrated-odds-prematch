@@ -11,8 +11,8 @@ function save_match($_dataArray, $_table){
 	/*echo '<pre>';
 	print_r($_dataArray);
 	echo '</pre>';
-	exit;
-*/
+	exit;*/
+	
 	foreach($_dataArray AS $_countryKey => $_countryVal){
 
 		foreach($_countryVal AS $_leagueKey => $_leagueVal){
