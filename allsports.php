@@ -5,6 +5,7 @@ include_once("includes/functions.php");
 	
 $sportActive = get_active_sports();
 $csport = (!empty($sportActive)) ?$sportActive[0] : 'Basketball';
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ $csport = (!empty($sportActive)) ?$sportActive[0] : 'Basketball';
 
   <body style="margin: 0;">
 
-    <iframe src="https://lvs-odds.mswodds.com/prematch/?sport=<?=$csport?>" title="MSW Pre-Match Odds" style="width: 100%; min-height: 99vh; border: none;"></iframe>
+    <iframe src="https://<?=$_SERVER['SERVER_NAME']?>/mswodds/prematch/?sport=<?=$csport?>" title="MSW Pre-Match Odds" style="width: 100%; min-height: 99vh; border: none;"></iframe>
 
   </body>
 
