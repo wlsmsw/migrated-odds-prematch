@@ -1,0 +1,794 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html, body,
+.market-info {
+  height: 100%;
+}
+
+body {
+  font: 100%/87.5% 'Roboto', Arial, sans-serif;
+  background-color: #111;
+}
+
+.league-title {    
+  background-color: #111;
+  color: #eee;
+  font-size: 1.5em;
+  line-height: 1em;
+  text-align: center;
+}
+
+.market {
+  width: 100%;
+}
+
+.market,
+.market-container,
+.list-batch,
+.list-batch-ul {
+  height: auto;
+}
+
+.market-odds {
+  background-color: #222;
+  font-size: 1.25em;
+  line-height: 1em;  
+  box-shadow: 0px -4px 0px 0px #111 inset;
+  display: list-item;
+}
+
+.market-odds::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10%;
+}
+
+.market-odds::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 13%;
+}
+
+.odds-wrapper {
+  background-color: #111;
+  height: 88%;
+  overflow: hidden;
+}
+
+.odds-wrapper ul, 
+.odds-wrapper li {
+  list-style-type: none;
+}
+
+.odds-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+
+.market-info {
+  color: #fff;
+}
+
+.event-name,
+.odds-price-draw,
+.odds-price1,
+.odds-price2,
+.odds-price,
+.odds-team-draw,
+.odds-team1, 
+.odds-team2,
+.odds-team,
+.header-inner {
+  font-weight: 700;
+}
+
+.event-container,
+.market-title-container {
+  height: 100%;
+  width: 100%;
+  display: inline;
+}
+
+.event-name,
+.market-title,
+.markets-date,
+.header-inner {
+  font-size: 4vh;
+  line-height: 1;
+  height: 80%;
+  display: inline-block;
+}
+
+.market-title::before,
+.market-title::after,
+.markets-date::before,
+.markets-date::after,
+.event-name::before,
+.event-name::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 34%;
+}
+
+.event-name,
+.market-title,.markets-date {
+	height: 74%;
+}
+
+.event-name{
+	width: 98%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.market-title{
+	width: 49%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.team-container-draw,
+.team-container {
+  color: #222;
+  float: left;
+  width: 78%;
+  background-color: #fff;
+  height: 100%;
+  
+  -ms-transform: skewX(-20deg); 
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);
+  outline: 1px solid transparent;
+}
+
+.price-container-draw,
+.price-container {
+  background: #f50;
+  display: inline-block;
+  float: right;
+  width: 22%;
+  height: 100%;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  -ms-transform: skewX(-20deg); 
+  -webkit-transform: skewX(-20deg); 
+  transform: skewX(-20deg);
+  outline: 1px solid transparent;
+}
+
+.odds-team-draw,
+.odds-team1,
+.odds-team2,
+.odds-team,
+.odds-price-draw,
+.odds-price1,
+.odds-price2,
+.odds-price,
+.market-date {    
+  font-size: 3.5vh;
+  line-height: 1;
+  height: 80%;
+}
+
+.odds-price-draw::before,
+.odds-price-draw::after,
+.odds-team-draw::before,
+.odds-team-draw::after,
+.market-date::before,
+.market-date::after,
+.odds-price1::before,
+.odds-price2::before,
+.odds-price::before,
+.odds-price1::after,
+.odds-price2::after,
+.odds-price::after,
+.odds-team1::before,
+.odds-team2::before,
+.odds-team::before,
+.odds-team1::after ,
+.odds-team::after ,
+.odds-team2::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 24%;
+}
+
+.odds-price-draw,
+.odds-price1,
+.odds-price2,
+.odds-price {
+  float: right;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+
+  -ms-transform: skewX(20deg); 
+  -webkit-transform: skewX(20deg); 
+  transform: skewX(20deg);
+  outline: 1px solid transparent;
+}
+
+.odds-team, .odds-team1,.odds-team2, .odds-team-draw {
+  float: left;
+  margin-left: 2%;
+  
+  -ms-transform: skewX(20deg); 
+  -webkit-transform: skewX(20deg); 
+  transform: skewX(20deg);
+  
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 97%;
+}
+
+.odds-selection {
+  padding: 0;
+  overflow: hidden;
+  height: 74%;
+}
+
+.odds-container-draw,
+.odds-container, .odds-container-outright,.odds-container-windrawwin {
+  display: inline-block;
+  float: left;
+  margin-right: 1%;
+  margin-left: 2%;
+  width: 37%;
+  height: 100%;
+  width: 46.5%;
+}
+
+.odds-container-draw,
+.odds-container, .odds-container-outright,.odds-container-windrawwin {
+  font-size: 1.125em;
+}
+
+.date-container {
+  float: right;
+  width: 20%;
+  height: 100%;
+}
+
+.market-date {
+  float: left;
+  font-weight: 700;
+  color: #eee;
+}
+
+.clock-time {
+  color: #f50;
+}
+/* Header */
+
+.header {
+  background: #ff7e00;
+  color: #fff;
+  bottom: 0px;
+  width: 100%;
+  height: 6%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-inner {
+  line-height: 1.55;
+}
+
+.header-container,
+.header-inner {
+  height: 100%;
+}
+
+/* Draw Override */
+.odds-draw .odds-container {
+  width: 28%;
+}
+.odds-selection .odds-container-outright {
+  width: 30%!important;
+}
+.odds-selection .odds-container-windrawwin {
+  width: 23%!important;
+  width: 30%!important;
+}
+.odds-draw .odds-container-draw {
+  width: 15%;
+}
+.odds-draw .price-container-draw {
+  width: 40%;
+}
+.odds-draw .team-container-draw {
+  width: 60%;
+}
+.odds-draw .odds-team {
+  margin-left: 3%;
+}
+.odds-draw .odds-team-draw{
+  margin-left: 8%;
+}
+
+/* Icons */
+
+.icon {
+  display: inline-block;
+  height: 34px;
+  width: 34px;
+  vertical-align: middle;
+  margin-top: -6px;
+  margin-right: 8px
+}
+
+.Basketball {
+  background: url(../images/icon-basketball.png) no-repeat center center;
+}
+
+.Tennis {
+  background: url(../images/icon-tennis.png) no-repeat center center;
+}
+
+.Soccer {
+  background: url(../images/icon-soccer.png) no-repeat center center;
+}
+
+.Volleyball {
+  background: url(../images/icon-volleyball.png) no-repeat center center;
+}
+
+.BeachVolleyball {
+  background: url(../images/icon-volleyball.png) no-repeat center center;
+}
+
+.Baseball {
+  background: url(../images/icon-baseball.png) no-repeat center center;
+}
+
+.IceHockey {
+  background: url(../images/icon-ice-hockey.png) no-repeat center center;
+}
+
+.Cricket {
+  background: url(../images/icon-cricket.png) no-repeat center center;
+}
+
+.AmericanFootball {
+  background: url(../images/icon-amfb.png) no-repeat center center;
+}
+
+.AussieRules {
+  background: url(../images/icon-aussie-rules.png) no-repeat center center;
+}
+
+.Rugby{
+  background: url(../images/icon-rugby.png) no-repeat center center;
+}
+
+.Handball {
+  background: url(../images/icon-handball.png) no-repeat center center;
+}
+
+.Badminton {
+  background: url(../images/icon-badminton.png) no-repeat center center;
+}
+
+.Snooker {
+  background: url(../images/icon-snooker.png) no-repeat center center;
+}
+
+.Golf {
+  background: url(../images/icon-golf.png) no-repeat center center;
+}
+
+.MotorSports {
+  background: url(../images/icon-motorsports.png) no-repeat center center;
+}
+
+.Darts {
+  background: url(../images/icon-darts.png) no-repeat center center;
+}
+
+.WinterSports {
+  background: url(../images/icon-wintersports.png) no-repeat center center;
+}
+
+.Cycling {
+  background: url(../images/icon-cycling.png) no-repeat center center;
+}
+
+.Boxing {
+  background: url(../images/icon-mma-boxing.png) no-repeat center center;
+}
+
+/* Saves */
+
+.save {
+  box-shadow: 0px 0px 0px 2px #f50 inset; /* inset */
+  box-shadow: 3px 0px 0px #ccc; /* cigarette-butt  */
+}
+
+
+/* Footer Ticker */
+
+.foot-ticker {
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+}
+
+.foot-container {
+    background-color: #000;
+    position: relative;
+    border: 0px solid #f00;
+}
+
+#clock-ticker {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0px solid #0f0;
+    height: 55px;
+    background: transparent url(http://localhost/mswodds/wp-content/plugins/msw-odds-lvs/images/clock-bg.png) no-repeat top left;
+    padding: 5px 0px 0px 35px;
+    text-transform: uppercase;
+}
+
+.foot-ticker-msw {
+    height: 62px;
+    background-color: #333;
+}
+
+.head-Soccer{
+	background: #3bb722;
+}
+
+.head-Tennis{
+	background: #239ad1;
+}
+
+.head-Basketball{
+	background: #ef4e23;
+}
+
+.head-Baseball{
+	background: #144a9a;
+}
+
+.head-IceHockey{
+	background: #25c5c3;
+}
+
+.head-Volleyball{
+	background: #8415bb;
+}
+
+.head-Handball{
+	background: #0b4c6e;
+}
+
+.head-AmericanFootball{
+	background: #a65629;
+}
+
+.head-Cricket{
+	background: #bf2626;
+}
+
+.head-AussieRules{
+	background: #ccaf1f;
+}
+
+.head-Rugby{
+	background: #2e9975;
+}
+
+.head-Badminton{
+	background: #575757;
+}
+
+.head-BeachVolleyball{
+	background: #857563;
+}
+
+.head-Snooker{
+	background: #6699FF;
+}
+
+.head-Golf{
+	background: #5B721C;
+}
+
+.head-MotorSports,
+.head-Formula1{
+	background: #2C7E42;
+}
+
+.head-Darts{
+	background: #6B2D2A;
+}
+
+.head-WinterSports{
+	background: #A85F94;
+}
+
+.head-Cycling{
+	background: #C63065;
+}
+
+
+.head-Boxing{
+	background: #DF5F5F;
+}
+
+.catlist{
+	margin-left:8%!important;
+}
+
+#no-match {
+    color: #000;
+	position: absolute;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -373px;
+    margin-top: -137px;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+* additional style
+*/
+body {
+    background: #fff;
+}
+.header {
+    height: auto;
+}
+.header-main {
+    background: #e6e6e6;
+    padding: 1rem 2rem;
+    text-align: left;
+    position: relative;
+}
+.header-main .logo {
+    display: inline-block;
+}
+.header-main .logo img {
+    width: 100px;
+}
+.header-main .date {
+    color: #000;
+    font-size: 3vh;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+}
+.header-main .date #clock-ticker {
+    position: unset;
+    height: auto;
+    background: none;
+    padding: 0;
+    display: inline-block;
+}
+.header-main .date #clock-ticker .clock-digit {
+    width: auto;
+    font-size: 3vh;
+    color: #000;
+    font-family: inherit;
+    margin: 0;
+}
+.header-inner {
+    background: #fa9a21;
+    text-align: left;
+    padding: .5rem 2rem;
+    line-height: 1;
+    display: block;
+}
+.header-inner .title {
+    display: inline-block;
+}
+.header-inner .title span {
+    background: #ed1b25;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+.header-inner .sport-label {
+    display: inline-block;
+    float: right;
+}
+
+.head-Soccer{
+	background: #3bb722;
+}
+
+.head-Tennis{
+	background: #239ad1;
+}
+
+.head-Basketball{
+	/*background: #ef4e23;*/
+	background: #fa9a21;
+}
+
+.head-Baseball{
+	background: #144a9a;
+}
+
+.head-IceHockey{
+	background: #25c5c3;
+}
+
+.head-Volleyball{
+	background: #8415bb;
+}
+
+.head-Handball{
+	background: #0b4c6e;
+}
+
+.head-AmericanFootball{
+	background: #a65629;
+}
+
+.head-Cricket{
+	background: #bf2626;
+}
+
+.head-AussieRules{
+	background: #ccaf1f;
+}
+
+.head-Rugby{
+	background: #2e9975;
+}
+
+.head-Badminton{
+	background: #575757;
+}
+
+.head-BeachVolleyball{
+	background: #857563;
+}
+
+.head-Snooker{
+	background: #6699FF;
+}
+
+.head-Golf{
+	background: #5B721C;
+}
+
+.head-MotorSports,
+.head-Formula1{
+	background: #2C7E42;
+}
+
+.head-Darts{
+	background: #6B2D2A;
+}
+
+.head-WinterSports{
+	background: #A85F94;
+}
+
+.head-Cycling{
+	background: #C63065;
+}
+
+.head-Boxing{
+	background: #DF5F5F;
+}
+
+.odds-wrapper {
+    background: #fff;
+    height: 80%;
+}
+.odds-wrapper .league-title {
+    height: auto !important;
+    padding: .5rem 1rem;
+    background: #222;
+}
+.odds-wrapper .league-title .event-container {
+    display: block;
+}
+.odds-wrapper .league-title .event-name {
+    height: auto;
+    width: 100%;
+    overflow: unset;
+}
+.odds-wrapper .market-odds {
+    background: #fff;
+    box-shadow: none;
+    border-bottom: 3px solid #e6e6e6;
+    height: auto !important;
+    padding: .5rem 0 1rem;
+}
+.odds-wrapper .market-odds .match-title {
+    color: #000;
+    text-align: center;
+    padding: 0;
+    font-size: 3vh;
+}
+.odds-wrapper .market-odds .odds-selection {
+    height: auto;
+    position: relative;
+}
+.odds-wrapper .market-odds .odds-selection .date-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+}
+.odds-wrapper .market-odds .team-container {
+    background: #000;
+    color: #fff;
+    padding: .5rem 0;
+}
+.odds-wrapper .market-odds .team-container .odds-team {
+    margin-left: 4%;
+    width: 94%;
+}
+.odds-wrapper .market-odds .team-container .odds-team,
+.odds-wrapper .market-odds .price-container .odds-price {
+    font-size: 2.8vh;
+    overflow: unset;
+}
+.odds-wrapper .market-odds .price-container {
+    padding: .5rem 0;
+    background: #fa9a21;
+}
+.odds-wrapper .market-odds .odds-selection .odds-container,
+.odds-wrapper .market-odds .odds-selection .odds-container-windrawwin {
+    margin-top: 2.5vh;
+}
+.date-container .market-date,
+.date-container .market-date .clock-time {
+    color: #222;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

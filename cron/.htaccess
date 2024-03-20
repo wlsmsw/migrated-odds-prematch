@@ -1,0 +1,14 @@
+
+<IfModule mod_rewrite.c>
+	#RewriteBase /lvs/
+	RewriteEngine on  
+	RewriteRule ^sport/live live.php [NC,L]
+	RewriteRule ^sport/scores/(.*) scores.php?a=$1 [NC,L]
+	RewriteRule ^sport/board/(.*) board.php?a=$1 [NC,L]
+	
+	RewriteRule ^sport/(.*) xml.php?a=$1&$2 [NC,L]
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^xml/(.*) xml/$1.xml  [NC,L]
+</IfModule>
