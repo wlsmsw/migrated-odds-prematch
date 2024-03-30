@@ -503,7 +503,7 @@ class mobileAPI extends reqAPI{
 		//print_r($this->result[0]);
 		$test = json_decode($this->result);
 		
-		print_r($test[1]);
+		//print_r($test[1]);
 		//print_r($test);
 	}
 

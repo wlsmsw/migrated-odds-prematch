@@ -459,6 +459,7 @@ $sportActive = get_active_sports();
 		
 		
 		var sports = "<?=$sport?>";
+		var server = "<?=$_SERVER['SERVER_NAME']?>";
 		var timer = 180000;
 		
 		if($('.market li ul').length == 0) timer = 100;
@@ -468,7 +469,7 @@ $sportActive = get_active_sports();
     		for(var i = 0; i < asports.length; i++) {
         	    if(sports == asports[i]) {
         	        var ns = (i + 1 == asports.length) ? asports[0] : asports[i + 1];
-        	        var link = "https://lvs-odds.mswodds.com/prematch/?sport=" + ns;
+        	        var link = "https://"+server+"/mswodds/prematch/?sport=" + ns;
         	        setTimeout(function() {
         		        window.location = link;
         		    }, timer);
