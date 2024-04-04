@@ -2,8 +2,8 @@
 
 switch($_SERVER['SERVER_NAME']){
     case 'mswlive.com':
-        $db_user = "mswliv5_api_mswdev";
-        $db_pass = "JHTh4?b(W(EF";
+        $db_user = "mswliv5_api_prematch_mswdev";
+        $db_pass = "OY&57(d-&W94";
         $db_host = "localhost";
         $db_name = "mswliv5_api_prematch_sports";
         break;
@@ -26,6 +26,7 @@ if (!$sv_conn) {
 }
 
 $db_conn = $sv_conn->select_db($db_name);
+
 if(!$db_conn){
   die('Cannot Select DB: '. $sv_conn->error);
 }
